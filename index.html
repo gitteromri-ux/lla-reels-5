@@ -1,0 +1,22 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>LLA Blueprint reels (5)</title><style>
+body{margin:0;background:#0b1530;color:#eef;font-family:system-ui,sans-serif}
+main{max-width:420px;margin:0 auto;padding:16px}
+h1{font-size:18px}.offer{font-size:15px;color:#e9cb91}
+section{margin:28px 0}h2{font-size:16px;margin:0 0 8px}
+video{width:100%;aspect-ratio:9/16;display:block;background:#000;border-radius:8px}
+a{color:#9cc3ff;font-size:14px}</style></head><body><main>
+<h1>Longevity Blueprint, November reels</h1>
+<p class="offer">Start for $79. Then $169 a month, four months. 14-day full refund.</p>
+<p>Tap a video for sound. Only one plays at a time.</p>
+<section><h2>#25 Blueprint card, 9:16</h2><video src="LLA_BP_Nov_25_card-blue_BP79_9x16_L14.mp4" controls muted playsinline preload="metadata"></video><a href="LLA_BP_Nov_25_card-blue_BP79_9x16_L14.mp4" download>Download #25</a></section>
+<section><h2>#26 Blueprint zoom, 9:16</h2><video src="LLA_BP_Nov_26_zoom-blue_BP79_9x16_L14.mp4" controls muted playsinline preload="metadata"></video><a href="LLA_BP_Nov_26_zoom-blue_BP79_9x16_L14.mp4" download>Download #26</a></section>
+<section><h2>#28 V7 Money, 9:16</h2><video src="LLA_BP_Nov_28_V7_MONEY_BP79_9x16_L14.mp4" controls muted playsinline preload="metadata"></video><a href="LLA_BP_Nov_28_V7_MONEY_BP79_9x16_L14.mp4" download>Download #28</a></section>
+<section><h2>#29 V7 Protocol, 9:16</h2><video src="LLA_BP_Nov_29_V7_PROTOCOL_BP79_9x16_L14.mp4" controls muted playsinline preload="metadata"></video><a href="LLA_BP_Nov_29_V7_PROTOCOL_BP79_9x16_L14.mp4" download>Download #29</a></section>
+<section><h2>#30 V7 Rank, 9:16</h2><video src="LLA_BP_Nov_30_V7_RANK_BP79_9x16_L14.mp4" controls muted playsinline preload="metadata"></video><a href="LLA_BP_Nov_30_V7_RANK_BP79_9x16_L14.mp4" download>Download #30</a></section>
+</main><script>
+const vs=[...document.querySelectorAll('video')];
+vs.forEach(v=>{v.addEventListener('play',()=>vs.forEach(o=>{if(o!==v)o.pause()}));v.addEventListener('click',()=>{v.muted=false})});
+const io=new IntersectionObserver(es=>{es.forEach(e=>{const v=e.target;if(e.isIntersecting&&e.intersectionRatio>=0.6){v.play().catch(()=>{})}else{v.pause()}})},{threshold:[0,0.6]});
+vs.forEach(v=>io.observe(v));
+</script></body></html>
