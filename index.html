@@ -17,6 +17,6 @@ a{color:#9cc3ff;font-size:14px}</style></head><body><main>
 </main><script>
 const vs=[...document.querySelectorAll('video')];
 vs.forEach(v=>{v.addEventListener('play',()=>vs.forEach(o=>{if(o!==v)o.pause()}));v.addEventListener('click',()=>{v.muted=false})});
-const io=new IntersectionObserver(es=>{es.forEach(e=>{const v=e.target;if(e.isIntersecting&&e.intersectionRatio>=0.6){v.play().catch(()=>{})}else{v.pause()}})},{threshold:[0,0.6]});
-vs.forEach(v=>io.observe(v));
+const io=new IntersectionObserver(es=>{es.forEach(e=>{const v=e.target;if(e.isIntersecting&&e.intersectionRatio>=0.6){v.play().catch(()=>{v.muted=true;v.play().catch(()=>{})})}else{v.pause()}})},{threshold:[0,0.6]});
+vs.forEach(v=>io.observe(v));["pointerdown","touchstart","scroll"].forEach(t=>document.addEventListener(t,()=>vs.forEach(o=>o.muted=false),{passive:true}));
 </script></body></html>
